@@ -1,2 +1,2 @@
-# TermInsuranceCalculator
-Term Insurance Calculator using Java
+# Term Insurance Calculator Core
+Term Insurance Calculator Core using Java
