@@ -8,6 +8,8 @@
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
+	<description>Term Insurance Fundamental Core module</description>
+
 	<name>Term Insurance Calcualtor Core</name>
 	<url>https://github.com/vaishnavmhetre/TermInsuranceCalculato</url>
 
@@ -27,6 +29,32 @@
 						<phase>verify</phase>
 						<goals>
 							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -53,7 +81,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<serverId>nexus</serverId>
+					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2</nexusUrl>
 					<skipStaging>true</skipStaging>
 				</configuration>
@@ -71,7 +99,6 @@
 	</dependencies>
 
 	<issueManagement>
-		<system>GitHub</system>
 		<url>https://github.com/vaishnavmhetre/TermInsuranceCalculatorCore/issues</url>
 	</issueManagement>
 
@@ -84,13 +111,28 @@
 	</licenses>
 
 	<distributionManagement>
-		<repository>
-			<id>internal</id>
-			<url>file://${project.build.directory}/mvn-repo</url>
-		</repository>
+		<!-- <repository> <id>internal</id> <url>file://${project.build.directory}/mvn-repo</url> 
+			</repository> -->
 		<snapshotRepository>
-			<id>nexus-snapshots</id>
+			<id>ossrh</id>
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
 	</distributionManagement>
+	<scm>
+		<url>https://github.com/vaishnavmhetre/TermInsuranceCalculatorCore</url>
+		<connection>scm:git:https://github.com/vaishnavmhetre/TermInsuranceCalculatorCore</connection>
+		<developerConnection>scm:git:https://github.com/vaishnavmhetre/TermInsuranceCalculatorCore</developerConnection>
+	</scm>
+	<developers>
+		<developer>
+			<email>mhetrevaishnav0@gmail.com</email>
+			<name>Vaishnav Mhetre</name>
+			<url>https://github.com/vaishnavmhetre</url>
+			<id>vaishnavmhetre</id>
+		</developer>
+	</developers>
 </project>

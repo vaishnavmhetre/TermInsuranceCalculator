@@ -20,14 +20,14 @@ public abstract class TermInsurance {
 	protected Double sumAssured;
 
 	/**
-	 * @return the perCentSumAssured
+	 * @return the perCentOfSumAssured
 	 */
 	public Double getPerCentOfSumAssured() {
 		return perCentOfSumAssured;
 	}
 
 	/**
-	 * @param perCentSumAssured the perCentSumAssured to set
+	 * @param perCentOfSumAssured the perCentSumAssured to set
 	 */
 	public void setPerCentOfSumAssured(Double perCentOfSumAssured) {
 		this.perCentOfSumAssured = perCentOfSumAssured;
